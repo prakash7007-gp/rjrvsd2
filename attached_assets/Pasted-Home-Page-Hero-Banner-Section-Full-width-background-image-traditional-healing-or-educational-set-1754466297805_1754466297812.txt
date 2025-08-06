@@ -1,0 +1,117 @@
+Home Page
+
+Hero Banner Section:
+
+Full-width background image (traditional healing or educational setting)
+
+Remove red overlay (show image clearly)
+
+Heading: "Welcome to RJR Education VSD Centre"
+
+Subheading: "Diploma in Varma Massage (DVM)"
+
+CTA Button: "Apply Now"
+
+Small About Section:
+
+Brief 3-4 line paragraph introducing the trust and its mission
+
+Affiliation Highlight:
+
+Text: "Affiliated with Manonmaniam Sundaranar University"
+
+Use a badge or certificate design style
+
+Course Highlight:
+
+Only one course: DVM - Diploma in Varma Massage
+
+Add key features (duration, benefits, learning outcomes)
+
+Contact CTA at the bottom: with a “Get in Touch” or “Join Now” button
+
+About Page
+
+Full history and mission of RJR Education VSD Centre
+
+Vision, values, and trust-building info
+
+Founder image or message (optional)
+
+Affiliation Page
+
+Details about the affiliation with Manonmaniam Sundaranar University
+
+Legal or academic recognition
+
+Display any certification visuals or seals
+
+Course Detail Page
+
+Full breakdown of the DVM course
+
+Course structure, syllabus overview
+
+Benefits of Varma Massage
+
+Career paths after completion
+
+Image or video section if needed
+
+Contact Page
+
+Simple contact form: Name, Email, Message
+
+Embedded Google Map of the center
+
+Contact info (email, phone, address)
+
+🟣 Color Scheme (Alternative to #FE7743):
+
+Primary: #2BAE66 (Herbal green)
+
+Secondary: #FCEADE (Soft beige)
+
+Accent: #3C8DAD (Healing blue)
+
+🔤 Language Switcher
+
+Enable full Google Translate support
+
+Dropdown with English / தமிழ் (Tamil)
+
+Must dynamically change all page content
+
+Fully responsive and visible on mobile too
+
+✏️ Typography
+
+Headings: Poppins, Inter or Merriweather
+
+Body: Open Sans or Roboto
+
+Use clean, readable layout with good spacing
+
+🔧 Components & Styling
+
+Navbar:
+
+Sticky
+
+Hover effects: underline + color change to match primary color
+
+Language switcher included
+
+Footer:
+
+Include trust name, social icons, and copyright
+
+Buttons:
+
+Rounded with hover animations
+
+Layout:
+
+Minimal, breathable spacing
+
+Mobile-first responsiveness
