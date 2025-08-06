@@ -30,35 +30,49 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
           }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
         
         <motion.div 
-          className="relative z-10 text-center text-white max-w-4xl mx-auto px-4"
+          className="relative z-10 text-center text-white max-w-5xl mx-auto px-4"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight" data-testid="hero-title">
-            {t('hero.title')}
-          </h1>
-          <h2 className="text-xl md:text-2xl font-heading font-medium mb-8 text-rjr-secondary" data-testid="hero-subtitle">
-            {t('hero.subtitle')}
-          </h2>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed" data-testid="hero-description">
-            {t('hero.description')}
-          </p>
-          <Link href="/contact">
-            <Button 
-              size="lg"
-              className="bg-rjr-primary hover:bg-green-600 text-white font-semibold py-4 px-8 text-lg transition duration-300 transform hover:scale-105 shadow-lg"
-              data-testid="hero-cta-button"
-            >
-              {t('hero.cta')}
-            </Button>
-          </Link>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight" data-testid="hero-title">
+              {t('hero.title')}
+            </h1>
+            <h2 className="text-xl md:text-2xl font-heading font-medium mb-8 text-amber-200" data-testid="hero-subtitle">
+              {t('hero.subtitle')}
+            </h2>
+            <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90" data-testid="hero-description">
+              {t('hero.description')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/contact">
+                <Button 
+                  size="lg"
+                  className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 px-8 text-lg transition duration-300 transform hover:scale-105 shadow-xl rounded-xl"
+                  data-testid="hero-cta-button"
+                >
+                  {t('hero.cta')}
+                </Button>
+              </Link>
+              <Link href="/course-details">
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-teal-600 font-semibold py-4 px-8 text-lg transition duration-300 rounded-xl backdrop-blur-sm"
+                  data-testid="hero-learn-more-button"
+                >
+                  Learn More
+                </Button>
+              </Link>
+            </div>
+          </div>
         </motion.div>
       </section>
 
@@ -283,7 +297,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-rjr-accent to-rjr-primary">
+      <section className="py-16 bg-gradient-to-r from-teal-600 to-teal-700">
         <motion.div 
           className="max-w-4xl mx-auto text-center px-4"
           {...fadeInUp}
@@ -298,7 +312,7 @@ export default function Home() {
             <Link href="/contact">
               <Button 
                 size="lg"
-                className="bg-white text-rjr-primary hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 transform hover:scale-105"
+                className="bg-white text-teal-600 hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 transform hover:scale-105 rounded-xl shadow-lg"
                 data-testid="cta-apply-button"
               >
                 {t('contact.apply')}

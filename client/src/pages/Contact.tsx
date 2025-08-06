@@ -83,7 +83,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-r from-rjr-primary to-rjr-accent">
+      <section className="relative py-24 bg-gradient-to-r from-teal-600 to-teal-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center text-white"
@@ -180,7 +180,7 @@ export default function Contact() {
                     <Button 
                       type="submit"
                       disabled={submitContactForm.isPending}
-                      className="w-full bg-rjr-primary hover:bg-green-600 text-white font-semibold py-3 transition duration-300"
+                      className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 transition duration-300 rounded-xl"
                       data-testid="button-submit"
                     >
                       {submitContactForm.isPending ? t('common.loading') : t('contact.send')}
@@ -260,7 +260,7 @@ export default function Contact() {
             className="text-center mt-16"
             {...fadeInUp}
           >
-            <div className="bg-gradient-to-r from-rjr-primary to-rjr-accent p-8 rounded-lg text-white" data-testid="contact-cta">
+            <div className="bg-gradient-to-r from-teal-600 to-teal-700 p-8 rounded-lg text-white" data-testid="contact-cta">
               <h3 className="text-2xl font-heading font-bold mb-4" data-testid="contact-cta-title">
                 {t('contact.ready')}
               </h3>
@@ -269,7 +269,7 @@ export default function Contact() {
               </p>
               <Button 
                 size="lg"
-                className="bg-white text-rjr-primary hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300"
+                className="bg-white text-teal-600 hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 rounded-xl shadow-lg"
                 data-testid="contact-cta-button"
               >
                 {t('contact.apply')}

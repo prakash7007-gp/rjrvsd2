@@ -85,7 +85,7 @@ export default function CourseDetails() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-r from-rjr-primary to-rjr-accent">
+      <section className="relative py-24 bg-gradient-to-r from-teal-600 to-teal-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center text-white"
