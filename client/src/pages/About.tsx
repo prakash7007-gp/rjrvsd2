@@ -15,7 +15,7 @@ export default function About() {
   const values = [
     {
       icon: Target,
-      title: "Our Mission",
+      title: " Mission",
       description: "To preserve and advance traditional healing through comprehensive education in Varma Massage therapy."
     },
     {
