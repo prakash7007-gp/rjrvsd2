@@ -15,11 +15,11 @@
   --card-foreground: hsl(20, 14.3%, 4.1%);
   --border: hsl(20, 5.9%, 90%);
   --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(173, 58%, 39%);
+  --primary:  hsl(0, 100%, 27%);
   --primary-foreground: hsl(211, 100%, 99%);
   --secondary: hsl(43, 87%, 94%);
   --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(198, 48%, 47%);
+  --accent:  hsl(0, 100%, 27%);
   --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
@@ -27,9 +27,9 @@
   --radius: 0.5rem;
   
   /* Custom colors for RJR Education */
-  --rjr-primary:  hsl(173, 58%, 39%);
-  --rjr-secondary: hsl(43, 87%, 94%);
-  --rjr-accent: hsl(198, 48%, 47%);
+  --rjr-primary:  hsl(0, 100%, 27%);
+  --rjr-secondary: hsl(42, 100%, 70%);
+  --rjr-accent: hsl(0, 100%, 27%);
   --neutral-800: hsl(217, 19%, 18%);
   --neutral-600: hsl(215, 13%, 42%);
   --neutral-50: hsl(210, 20%, 98%);
@@ -46,7 +46,7 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(173, 58%, 39%);
+  --primary: hsl(0, 100%, 27%);
   --primary-foreground: hsl(211, 100%, 99%);
   --secondary: hsl(240, 3.7%, 15.9%);
   --secondary-foreground: hsl(0, 0%, 98%);

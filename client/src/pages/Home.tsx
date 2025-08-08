@@ -5,6 +5,10 @@ import { Clock, Award, BookOpen, Users, Lightbulb, Briefcase, CheckCircle } from
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { useLanguage } from "@/hooks/useLanguage";
+import logo from "@/assets/logo.png";
+import varma from "@/assets/varma.jpg";
+
+
 
 export default function Home() {
   const { t } = useLanguage();
@@ -27,15 +31,15 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60" />
-        
-        <motion.div 
+
+        <motion.div
           className="relative z-10 text-center text-white max-w-5xl mx-auto px-4"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,7 +57,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/contact">
-                <Button 
+                <Button
                   size="lg"
                   className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 px-8 text-lg transition duration-300 transform hover:scale-105 shadow-xl rounded-xl"
                   data-testid="hero-cta-button"
@@ -62,7 +66,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/course-details">
-                <Button 
+                <Button
                   size="lg"
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white hover:text-teal-600 font-semibold py-4 px-8 text-lg transition duration-300 rounded-xl backdrop-blur-sm"
@@ -79,7 +83,7 @@ export default function Home() {
       {/* About Section */}
       <section className="py-16 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             {...fadeInUp}
           >
@@ -88,15 +92,16 @@ export default function Home() {
             </h2>
             <div className="w-24 h-1 bg-rjr-primary mx-auto mb-8" />
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeInUp}>
-              <img 
-                src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Educational institution building" 
-                className="rounded-lg shadow-lg w-full"
+              <img
+                src={logo}
+                alt="Educational institution building"
+                className="rounded-lg shadow-lg w-full hover:rotate-y-180 transform transition-transform duration-700"
                 data-testid="about-image"
               />
+
             </motion.div>
             <motion.div {...fadeInUp}>
               <p className="text-lg mb-6 leading-relaxed text-neutral-600" data-testid="about-description-1">
@@ -108,7 +113,7 @@ export default function Home() {
               <p className="text-lg mb-8 leading-relaxed text-neutral-600" data-testid="about-description-3">
                 {t('about.description3')}
               </p>
-              
+
               {/* Affiliation Badge */}
               <Card className="bg-white border-l-4 border-rjr-accent" data-testid="affiliation-badge">
                 <CardContent className="p-6">
@@ -133,7 +138,7 @@ export default function Home() {
       {/* Course Highlight Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             {...fadeInUp}
           >
@@ -148,9 +153,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <motion.div {...fadeInUp}>
-              <img 
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Varma massage therapy session" 
+              <img
+                src={varma}
+                alt="Varma massage therapy session"
                 className="rounded-lg shadow-lg w-full"
                 data-testid="course-image"
               />
@@ -186,7 +191,7 @@ export default function Home() {
           </div>
 
           {/* Course Features */}
-          <motion.div 
+          <motion.div
             className="grid md:grid-cols-3 gap-8 mb-12"
             variants={staggerChildren}
             initial="initial"
@@ -206,7 +211,7 @@ export default function Home() {
                 </CardContent>
               </Card>
             </motion.div>
-            
+
             <motion.div variants={fadeInUp}>
               <Card className="bg-rjr-secondary p-6 text-center h-full" data-testid="feature-faculty">
                 <CardContent className="p-0">
@@ -220,7 +225,7 @@ export default function Home() {
                 </CardContent>
               </Card>
             </motion.div>
-            
+
             <motion.div variants={fadeInUp}>
               <Card className="bg-rjr-secondary p-6 text-center h-full" data-testid="feature-career">
                 <CardContent className="p-0">
@@ -237,7 +242,7 @@ export default function Home() {
           </motion.div>
 
           {/* Detailed Curriculum */}
-          <motion.div 
+          <motion.div
             className="bg-neutral-50 p-8 rounded-lg"
             {...fadeInUp}
           >
@@ -297,8 +302,8 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-teal-600 to-teal-700">
-        <motion.div 
+      <section className="py-16 bg-rjr-primary  ">
+        <motion.div
           className="max-w-4xl mx-auto text-center px-4"
           {...fadeInUp}
         >
@@ -310,7 +315,7 @@ export default function Home() {
               {t('contact.ready_desc')}
             </p>
             <Link href="/contact">
-              <Button 
+              <Button
                 size="lg"
                 className="bg-white text-teal-600 hover:bg-gray-100 font-semibold py-3 px-8 transition duration-300 transform hover:scale-105 rounded-xl shadow-lg"
                 data-testid="cta-apply-button"

@@ -3,6 +3,8 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/hooks/useLanguage";
+import logo from "@/assets/logo.png"; // 🔁 Replace with your logo path
+import TopBar from "./Topbar";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,17 +20,22 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-lg border-b border-gray-100">
+    <>  
+    <TopBar />
+      <nav className="sticky top-0 z-50 bg-white shadow-lg border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" data-testid="logo-link">
+          
+          {/* Logo + Brand */}
+          <div className="flex items-center space-x-2">
+            <Link href="/" data-testid="logo-link" className="flex items-center space-x-2">
+              <img src={logo} alt="RJR Logo" className="h-10 w-10 object-contain" />
               <h1 className="text-xl font-heading font-bold text-rjr-primary cursor-pointer">
                 RJR Education VSD
               </h1>
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -37,7 +44,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   data-testid={`nav-link-${item.href.replace('/', '') || 'home'}`}
-                  className={`px-3 py-2 text-sm font-medium transition duration-300 hover:text-rjr-primary hover:underline ${
+                  className={`px-3 py-2 text-sm font-medium rounded-md transition duration-300 transform hover:scale-105 hover:bg-rjr-secondary hover:text-white ${
                     location === item.href
                       ? "text-rjr-primary border-b-2 border-rjr-primary"
                       : "text-neutral-800"
@@ -76,10 +83,10 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block px-3 py-2 text-base font-medium transition duration-300 ${
+                className={`block px-3 py-2 text-base font-medium rounded-md transition duration-300 transform hover:scale-105 hover:bg-rjr-secondary hover:text-white ${
                   location === item.href
                     ? "text-rjr-primary bg-rjr-secondary"
-                    : "text-neutral-800 hover:text-rjr-primary"
+                    : "text-neutral-800"
                 }`}
                 onClick={() => setIsOpen(false)}
                 data-testid={`mobile-nav-link-${item.href.replace('/', '') || 'home'}`}
@@ -94,5 +101,7 @@ export function Navbar() {
         </div>
       )}
     </nav>
+    </>
+
   );
 }
