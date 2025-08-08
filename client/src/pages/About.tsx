@@ -51,7 +51,7 @@ export default function About() {
             </h1>
             <div className="w-24 h-1 bg-white mx-auto mb-8" />
             <p className="text-xl max-w-3xl mx-auto leading-relaxed" data-testid="about-page-intro">
-              Preserving traditional healing knowledge while embracing modern educational excellence
+               traditional healing knowledge while embracing modern educational excellence
             </p>
           </motion.div>
         </div>
